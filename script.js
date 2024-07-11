@@ -3,6 +3,21 @@ const CITY = 'London';
 const COUNTRY = 'United Kingdom';
 const METHOD = 2; // Islamic Society of North America (ISNA)
 
+const fetchPrayerTimes = async (date) => {
+    try {
+      const response = await axios.get('/api/prayerTimes', {
+        params: {
+          date: date,
+        },
+      });
+  
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching prayer times:', error);
+      return null;
+    }
+  };
+
 const getPrayerTimes = async (date) => {
     try {
         const response = await axios.get(API_URL, {
@@ -53,7 +68,7 @@ const main = async () => {
         document.getElementById('halfway-time').textContent = halfwayTime;
     } else {
         console.error('Unable to fetch prayer times.');
-        document.getElementById('halfway-time').textContent = 'Error fetching prayer times';
+        document.getElementById('halfway-time').textContent = 'Error 404';
     }
 };
 
