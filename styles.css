@@ -1,0 +1,45 @@
+body {
+    background-color: #021b47;
+    background-image: url(cartoon-style-ocean-background-for-product-showca-free-photo\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.title {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 300%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 10);
+    animation: jiggle 3s infinite alternate;
+    color: #46d3a9;
+}
+.time {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 600%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 10);
+    animation: jiggle 3s infinite alternate;
+    color: #62b68f;
+}
+
+
+.container {
+    text-align: center;
+}
+
+.animated-text {
+    font-family:'Courier New', Courier, monospace;
+    color: #6ac9ac;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 10);
+    animation: jiggle 3s infinite alternate;
+}
+
+@keyframes jiggle {
+    from { transform: rotateZ(-2deg); }
+    to { transform: rotateZ(2deg); }
+}
+
